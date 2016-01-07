@@ -13,7 +13,8 @@ lua_support* lua_support::m_instance = nullptr;
 
 int luaopen_main_loop (lua_State* tolua_S);
 int luaopen_glview (lua_State* tolua_S);
-
+int luaopen_display (lua_State* tolua_S);
+//int luaopen_image (lua_State* tolua_S);
 
 lua_support::lua_support(){
     m_state = luaL_newstate();
@@ -36,6 +37,7 @@ lua_support::lua_support(){
     
     luaopen_glview(m_state);
     luaopen_main_loop(m_state);
+    luaopen_display(m_state);
     
     //
     std::string projectPath;

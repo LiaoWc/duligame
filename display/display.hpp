@@ -8,7 +8,21 @@
 
 #ifndef display_hpp
 #define display_hpp
+#include "image.hpp"
+namespace duli
+{
+    class display
+    {
+    public:
+        static display* get_instance();
+        void new_image();
+        void new_text();
+    private:
+        display();
+        ~display();
+        static display* m_instance;
+    };
+}
 
-#include <stdio.h>
 
 #endif /* display_hpp */

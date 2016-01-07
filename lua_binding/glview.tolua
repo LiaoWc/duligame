@@ -2,6 +2,7 @@ $#include "glview.hpp"
 
 class glview
 {
+public:
   	static glview* get_instance();
   	void set_size(float width,float height);
   	float get_width();

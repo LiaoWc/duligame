@@ -1,0 +1,36 @@
+$#include "base.hpp"
+$#include "image.hpp"
+$#include "text.hpp"
+$using namespace duli;
+class base
+{
+public:
+  	void set_position(const float x,const float y);
+        void set_position_x(const float x);
+        void set_position_y(const float y);
+        float get_position_x();
+        float get_position_y();
+        
+        void set_scale(const float s);
+        void set_scale_x(const float s);
+        void set_scale_y(const float s);
+        float get_scale_x();
+        float get_scale_y();
+        float get_scale();
+        
+        void set_rotation(const float r);
+        float get_rotation();
+};
+class image:public base
+{
+public:
+	image();
+  	void set_file(const char* file);
+};
+class text:public base
+{
+public:
+    text();
+    void set_string(const char* str);
+    void set_size(const float s);
+};

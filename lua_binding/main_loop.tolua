@@ -2,6 +2,7 @@ $#include "main_loop.hpp"
 
 class main_loop
 {
+public:
   	static main_loop* get_instance();
   	int set_callback(lua_Function cb);
 };
